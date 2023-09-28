@@ -1,0 +1,49 @@
+{
+  "name": "@hamedstack/azure-logic-apps",
+  "version": "1.0.0",
+  "source": "src/index.ts",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/commonjs/index.d.ts",
+  "typings": "dist/commonjs/index.d.ts",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=7"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HamedStack/HamedStack.AzureLogicApps.TypeScript.git"
+  },
+  "author": "Hamed Fathi",
+  "bugs": {
+    "url": "https://github.com/HamedStack/HamedStack.AzureLogicApps.TypeScript/issues"
+  },
+  "homepage": "https://github.com/HamedStack/HamedStack.AzureLogicApps.TypeScript#readme",
+  "scripts": {
+    "build": "rimraf dist && tsc && tsc --build tsconfig.commonjs.json",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "doc": "rimraf docs && typedoc src/index.ts --excludeExternals --externalPattern \"**/node_modules/**\"",
+    "aio":"npm run lint-fix && npm run build && npm run doc"
+  },
+  "dependencies": {
+    "@azure/arm-logic": "^8.2.0",
+    "@azure/identity": "3.3.0",
+    "jsonpath-plus": "^7.2.0"
+  },
+  "devDependencies": {
+    "rimraf": "~5.0.5",
+    "typedoc": "^0.25.1",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.2.2"
+  }
+}
