@@ -27,7 +27,8 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "doc": "rimraf docs && typedoc src/index.ts --excludeExternals --externalPattern \"**/node_modules/**\"",
-    "aio":"npm run lint-fix && npm run build && npm run doc"
+    "aio":"npm run lint-fix && npm run build && npm run doc",
+	"release": "npm publish --access public"
   },
   "dependencies": {
     "@azure/arm-logic": "^8.2.0",
